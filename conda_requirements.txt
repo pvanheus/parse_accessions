@@ -1,0 +1,5 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+beautifulsoup4>=4.8.0
+requests>=2.22.0
