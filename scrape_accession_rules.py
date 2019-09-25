@@ -33,6 +33,7 @@ scrape_accession_rules.py accession_rules.json
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+from __future__ import print_function
 import argparse
 import json
 from typing import List, Tuple, TextIO
@@ -81,6 +82,31 @@ def parse_refseq_rules(text: str) -> RulesData:
         data.append(([prefix], database, molecule_type, type_description))
     return data
 
+def parse_sra_rules(text: str) -> RulesData:
+    """parse_sra_rules(text: str) -> RulesData
+    
+    Parse the rules for SRA, ENA and DDBJ equivalent (thanks to Torsten Seemann for pointing them out)"""
+    soup = BeautifulSoup(text, 'html.parser')
+    sra_table = soup.find('h4', id='search.what_do_the_different_sra_accessi').next_sibling.table
+    data = []
+    for row in sra_table.tbody.find_all('tr'):
+        prefix = row.td.text
+        database = 'NCBI'
+        type_description = row.td.next_sibling.text.strip()
+        type_description += ': ' + row.td.next_sibling.next_sibling.text
+        accession_type = 'SRA'
+        data.append(([prefix], database, accession_type, type_description))
+    ena_table = soup.find('h4', id='search.what_do_the_different_sra_accessi').next_sibling.contents[4].table
+    embl_ddbj_data = []
+    for database in ('EMBL', 'DDBJ'):
+        prefix_start = database[0]
+        for old_prefix, _, accession_type, old_type_description in data:
+            prefix = prefix_start + old_prefix[0][1:]
+            type_description = prefix_start + old_type_description[1:]
+            embl_ddbj_data.append(([prefix], database, accession_type, type_description))
+    data.extend(embl_ddbj_data)
+    return data
+
 
 def fetch(url: str = 'https://www.ncbi.nlm.nih.gov/Sequin/acc.html') -> str:
     """fetch(url:str) -> str
@@ -107,4 +133,6 @@ if __name__ == "__main__":
     data = parse_rules(fetch())
     refseq_data = parse_refseq_rules(fetch(url='https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/?report=objectonly'))
     data.extend(refseq_data)
+    sra_data = parse_sra_rules(fetch(url='https://www.ncbi.nlm.nih.gov/books/NBK56913'))
+    data.extend(sra_data)
     save_data(data, args.output_file)

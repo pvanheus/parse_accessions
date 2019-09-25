@@ -2,7 +2,8 @@ This project contains two sets of code:
 
 Firstly, parser for the accession format described here: https://www.ncbi.nlm.nih.gov/Sequin/acc.html called 
 `scrape_accession_rules.py` and the RefSeq sections described in 
-https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/?report=objectonly. 
+https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/?report=objectonly and
+the SRA accessions described in https://www.ncbi.nlm.nih.gov/books/NBK56913/#search.what_do_the_different_sra_accessi.
 This can be run as 
 
 ```
@@ -15,3 +16,6 @@ as a command line tool e.g. `parse_accession.py accession_rules.json AE014297`.
 
 The `parse_accession.py` script aims to work with all Python versions. The `scrape_accession_rules.py`
 script requires at least Python 3.6 and the modules specified in `conda_requirements.txt`.
+
+This code is licensed under the BSD 3 clause license. Please feel free to use and modify the code, but
+it is released without warranty. See the `.py` files for details.

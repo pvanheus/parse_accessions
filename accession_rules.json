@@ -940,5 +940,149 @@
     "NCBI",
     "Protein",
     "Non-redundant across multiple strains and species"
+  ],
+  [
+    [
+      "SRA"
+    ],
+    "NCBI",
+    "SRA",
+    "SRA submission accession: The submission accession represents a virtual container that holds the objects represented by the other five accessions and is used to track the submission in the archive."
+  ],
+  [
+    [
+      "SRP"
+    ],
+    "NCBI",
+    "SRA",
+    "SRA study accession: A Study is an object that contains the project metadata describing a sequencing study or project. Imported from BioProject."
+  ],
+  [
+    [
+      "SRX"
+    ],
+    "NCBI",
+    "SRA",
+    "SRA experiment accession: An Experiment is an object that contains the metadata describing the library, platform selection, and processing parameters involved in a particular sequencing experiment."
+  ],
+  [
+    [
+      "SRR"
+    ],
+    "NCBI",
+    "SRA",
+    "SRA run accession: A Run is an object that contains actual sequencing data for a particular sequencing experiment. Experiments may contain many Runs depending on the number of sequencing instrument runs that were needed."
+  ],
+  [
+    [
+      "SRS"
+    ],
+    "NCBI",
+    "SRA",
+    "SRA sample accession: A Sample is an object that contains the metadata describing the physical sample upon which a sequencing experiment was performed. Imported from BioSample."
+  ],
+  [
+    [
+      "SRZ"
+    ],
+    "NCBI",
+    "SRA",
+    "SRA analysis accession: An analysis is an object that contains a sequence data analysis BAM file and the metadata describing the sequence analysis."
+  ],
+  [
+    [
+      "ERA"
+    ],
+    "EMBL",
+    "SRA",
+    "ERA submission accession: The submission accession represents a virtual container that holds the objects represented by the other five accessions and is used to track the submission in the archive."
+  ],
+  [
+    [
+      "ERP"
+    ],
+    "EMBL",
+    "SRA",
+    "ERA study accession: A Study is an object that contains the project metadata describing a sequencing study or project. Imported from BioProject."
+  ],
+  [
+    [
+      "ERX"
+    ],
+    "EMBL",
+    "SRA",
+    "ERA experiment accession: An Experiment is an object that contains the metadata describing the library, platform selection, and processing parameters involved in a particular sequencing experiment."
+  ],
+  [
+    [
+      "ERR"
+    ],
+    "EMBL",
+    "SRA",
+    "ERA run accession: A Run is an object that contains actual sequencing data for a particular sequencing experiment. Experiments may contain many Runs depending on the number of sequencing instrument runs that were needed."
+  ],
+  [
+    [
+      "ERS"
+    ],
+    "EMBL",
+    "SRA",
+    "ERA sample accession: A Sample is an object that contains the metadata describing the physical sample upon which a sequencing experiment was performed. Imported from BioSample."
+  ],
+  [
+    [
+      "ERZ"
+    ],
+    "EMBL",
+    "SRA",
+    "ERA analysis accession: An analysis is an object that contains a sequence data analysis BAM file and the metadata describing the sequence analysis."
+  ],
+  [
+    [
+      "DRA"
+    ],
+    "DDBJ",
+    "SRA",
+    "DRA submission accession: The submission accession represents a virtual container that holds the objects represented by the other five accessions and is used to track the submission in the archive."
+  ],
+  [
+    [
+      "DRP"
+    ],
+    "DDBJ",
+    "SRA",
+    "DRA study accession: A Study is an object that contains the project metadata describing a sequencing study or project. Imported from BioProject."
+  ],
+  [
+    [
+      "DRX"
+    ],
+    "DDBJ",
+    "SRA",
+    "DRA experiment accession: An Experiment is an object that contains the metadata describing the library, platform selection, and processing parameters involved in a particular sequencing experiment."
+  ],
+  [
+    [
+      "DRR"
+    ],
+    "DDBJ",
+    "SRA",
+    "DRA run accession: A Run is an object that contains actual sequencing data for a particular sequencing experiment. Experiments may contain many Runs depending on the number of sequencing instrument runs that were needed."
+  ],
+  [
+    [
+      "DRS"
+    ],
+    "DDBJ",
+    "SRA",
+    "DRA sample accession: A Sample is an object that contains the metadata describing the physical sample upon which a sequencing experiment was performed. Imported from BioSample."
+  ],
+  [
+    [
+      "DRZ"
+    ],
+    "DDBJ",
+    "SRA",
+    "DRA analysis accession: An analysis is an object that contains a sequence data analysis BAM file and the metadata describing the sequence analysis."
   ]
 ]
