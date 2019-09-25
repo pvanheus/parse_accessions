@@ -126,7 +126,12 @@ def match_accession(accession, rules_by_prefix_len):
     if letter_match_length < 3:
         accession_type = 'nucleotide'
     elif letter_match_length < 4:
-        accession_type = 'protein'
+        if letter_prefix in ('SRA', 'SRP', 'SRX', 'SRR', 'SRS', 'SRZ',
+                             'ERA', 'ERP', 'ERX', 'ERR', 'ERS', 'ERZ',
+                             'DRA', 'DRP', 'DRX', 'DRR', 'DRS', 'DRZ'):
+            accession_type = 'SRA'
+        else:
+            accession_type = 'protein'
     elif letter_match_length in (4, 6):
         accession_type = 'WGS'
     elif letter_match_length == 5:
