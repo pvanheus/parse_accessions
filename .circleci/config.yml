@@ -1,0 +1,33 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/parse_accessions
+    docker:
+      - image: continuumio/miniconda3
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - parse_accessions-{{ checksum "conda_requirements.txt" }}
+
+
+      - run:
+          command: |
+            conda config --add channels conda-forge
+            conda config --add channels bioconda
+            conda install --file conda_requirements.txt
+
+      - save_cache:
+          key: parse_accessions-{{ checksum "conda_requirements.txt" }}
+          paths:
+            - /opt/conda
+
+      - run: python -m pytest
+
+      - store_test_results:
+          path: test/results
+      - store_artifacts:
+          path: test/results
+          destination: tr1
