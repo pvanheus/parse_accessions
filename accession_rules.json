@@ -7,6 +7,7 @@
       "LD"
     ],
     "DDBJ",
+    "unknown",
     "CON division"
   ],
   [
@@ -14,6 +15,7 @@
       "AN"
     ],
     "EMBL",
+    "unknown",
     "CON division"
   ],
   [
@@ -42,6 +44,7 @@
       "ML"
     ],
     "NCBI",
+    "unknown",
     "CON division"
   ],
   [
@@ -68,6 +71,7 @@
       "LU"
     ],
     "DDBJ",
+    "unknown",
     "EST"
   ],
   [
@@ -75,6 +79,7 @@
       "F"
     ],
     "EMBL",
+    "unknown",
     "EST"
   ],
   [
@@ -141,6 +146,7 @@
       "JZ"
     ],
     "GenBank",
+    "unknown",
     "EST"
   ],
   [
@@ -150,6 +156,7 @@
       "LC"
     ],
     "DDBJ",
+    "unknown",
     "Direct submissions"
   ],
   [
@@ -181,6 +188,7 @@
       "OE"
     ],
     "EMBL",
+    "unknown",
     "Direct submissions"
   ],
   [
@@ -217,6 +225,7 @@
       "MN"
     ],
     "GenBank",
+    "unknown",
     "Direct submissions"
   ],
   [
@@ -224,6 +233,7 @@
       "AP"
     ],
     "DDBJ",
+    "unknown",
     "Genome project data"
   ],
   [
@@ -231,6 +241,7 @@
       "BS"
     ],
     "DDBJ",
+    "unknown",
     "Chimpanzee genome data"
   ],
   [
@@ -245,6 +256,7 @@
       "FR"
     ],
     "EMBL",
+    "unknown",
     "Genome project data"
   ],
   [
@@ -254,6 +266,7 @@
       "CY"
     ],
     "GenBank",
+    "unknown",
     "Genome project data"
   ],
   [
@@ -266,6 +279,7 @@
       "LB"
     ],
     "DDBJ",
+    "unknown",
     "GSS"
   ],
   [
@@ -304,6 +318,7 @@
       "MJ"
     ],
     "GenBank",
+    "unknown",
     "GSS"
   ],
   [
@@ -311,6 +326,7 @@
       "AK"
     ],
     "DDBJ",
+    "unknown",
     "cDNA projects"
   ],
   [
@@ -319,6 +335,7 @@
       "DP"
     ],
     "GenBank",
+    "unknown",
     "HTGS"
   ],
   [
@@ -349,6 +366,7 @@
       "MC"
     ],
     "DDBJ",
+    "unknown",
     "Patents"
   ],
   [
@@ -379,6 +397,7 @@
       "MS"
     ],
     "EMBL",
+    "unknown",
     "Patents (nucleotide only)"
   ],
   [
@@ -402,6 +421,7 @@
       "MO"
     ],
     "GenBank",
+    "unknown",
     "Patents (nucleotide)"
   ],
   [
@@ -411,6 +431,7 @@
       "GF"
     ],
     "GenBank",
+    "unknown",
     "STS"
   ],
   [
@@ -418,6 +439,7 @@
       "BR"
     ],
     "DDBJ",
+    "unknown",
     "TPA"
   ],
   [
@@ -425,6 +447,7 @@
       "BN"
     ],
     "EMBL",
+    "unknown",
     "TPA"
   ],
   [
@@ -432,6 +455,7 @@
       "BK"
     ],
     "GenBank",
+    "unknown",
     "TPA"
   ],
   [
@@ -440,6 +464,7 @@
       "HU"
     ],
     "DDBJ",
+    "unknown",
     "TPA CON division"
   ],
   [
@@ -449,6 +474,7 @@
       "GK"
     ],
     "GenBank",
+    "unknown",
     "TPA CON division"
   ],
   [
@@ -467,6 +493,7 @@
       "KA"
     ],
     "GenBank",
+    "unknown",
     "TSA"
   ],
   [
@@ -479,6 +506,7 @@
       "LJ"
     ],
     "DDBJ",
+    "unknown",
     "TSA"
   ],
   [
@@ -486,6 +514,7 @@
       "S"
     ],
     "GenBank",
+    "unknown",
     "From journal scanning"
   ],
   [
@@ -493,6 +522,7 @@
       "AD"
     ],
     "GenBank",
+    "unknown",
     "From GSDB"
   ],
   [
@@ -500,6 +530,7 @@
       "AH"
     ],
     "GenBank",
+    "unknown",
     "Segmented set header"
   ],
   [
@@ -507,6 +538,7 @@
       "AS"
     ],
     "GenBank",
+    "unknown",
     "Other - not currently being used"
   ],
   [
@@ -514,6 +546,7 @@
       "BC"
     ],
     "GenBank",
+    "unknown",
     "MGC project"
   ],
   [
@@ -521,6 +554,7 @@
       "BT"
     ],
     "GenBank",
+    "unknown",
     "FLI-cDNA projects"
   ],
   [
@@ -531,6 +565,7 @@
       "M"
     ],
     "GenBank",
+    "unknown",
     "from GSDB direct submissions"
   ],
   [
@@ -538,6 +573,7 @@
       "N"
     ],
     "GenBank and DDBJ",
+    "unknown",
     "N0-N2 were used intially by both groups but have been removed from circulation, N2-N9 are ESTs "
   ],
   [
@@ -554,6 +590,7 @@
       "VAAA-VZZZ"
     ],
     "GenBank",
+    "unknown",
     "WGS"
   ],
   [
@@ -561,6 +598,7 @@
       "AAAAAA-AZZZZZ"
     ],
     "GenBank",
+    "unknown",
     "WGS"
   ],
   [
@@ -568,6 +606,7 @@
       "BAAA-BZZZ"
     ],
     "DDBJ",
+    "unknown",
     "WGS"
   ],
   [
@@ -575,6 +614,7 @@
       "BAAAAA-BZZZZZ"
     ],
     "DDBJ",
+    "unknown",
     "WGS"
   ],
   [
@@ -585,6 +625,7 @@
       "UAAA-UZZZ"
     ],
     "EMBL",
+    "unknown",
     "WGS"
   ],
   [
@@ -592,6 +633,7 @@
       "CAAAAA-CZZZZZ"
     ],
     "EMBL",
+    "unknown",
     "WGS"
   ],
   [
@@ -599,6 +641,7 @@
       "DAAA-DZZZ"
     ],
     "GenBank",
+    "unknown",
     "WGS TPA"
   ],
   [
@@ -606,6 +649,7 @@
       "DAAAAA-DZZZZZ"
     ],
     "GenBank",
+    "unknown",
     "WGS TPA"
   ],
   [
@@ -613,6 +657,7 @@
       "EAAA-EZZZ"
     ],
     "DDBJ",
+    "unknown",
     "WGS TPA"
   ],
   [
@@ -620,6 +665,7 @@
       "GAAA-GZZZ"
     ],
     "GenBank",
+    "unknown",
     "TSA"
   ],
   [
@@ -627,6 +673,7 @@
       "HAAA-HZZZ"
     ],
     "EMBL",
+    "unknown",
     "TSA"
   ],
   [
@@ -634,6 +681,7 @@
       "IAAA-IZZZ"
     ],
     "DDBJ",
+    "unknown",
     "TSA"
   ],
   [
@@ -641,6 +689,7 @@
       "TAAA-TZZZ"
     ],
     "DDBJ",
+    "unknown",
     "Targeted Gene Projects"
   ],
   [
@@ -648,6 +697,7 @@
       "KAAA-KZZZ"
     ],
     "GenBank",
+    "unknown",
     "Targeted Gene Projects"
   ],
   [
@@ -655,6 +705,7 @@
       "AAAAA-AZZZZ"
     ],
     "DDBJ",
+    "unknown",
     "MGA"
   ],
   [
@@ -662,6 +713,7 @@
       "BAA-BZZ"
     ],
     "DDBJ",
+    "unknown",
     "Protein ID"
   ],
   [
@@ -671,6 +723,7 @@
       "VAA-VZZ"
     ],
     "EMBL",
+    "unknown",
     "Protein ID"
   ],
   [
@@ -679,6 +732,7 @@
       "QAA-QZZ"
     ],
     "GenBank",
+    "unknown",
     "Protein ID"
   ],
   [
@@ -686,6 +740,7 @@
       "AAE"
     ],
     "GenBank",
+    "unknown",
     "Protein ID for Patents (note that there are also some patent proteins with AAA and AAC"
   ],
   [
@@ -693,6 +748,7 @@
       "FAA_FZZ"
     ],
     "DDBJ",
+    "unknown",
     "TPA Protein ID"
   ],
   [
@@ -700,6 +756,7 @@
       "DAA-DZZ"
     ],
     "GenBank",
+    "unknown",
     "TPA or TPA WGS Protein ID"
   ],
   [
@@ -707,6 +764,7 @@
       "GAA-GZZ"
     ],
     "DDBJ",
+    "unknown",
     "WGS Protein ID"
   ],
   [
@@ -719,6 +777,7 @@
       "TAA-TZZ"
     ],
     "GenBank",
+    "unknown",
     "WGS Protein ID"
   ],
   [
@@ -726,6 +785,7 @@
       "HAA-HZZ"
     ],
     "GenBank",
+    "unknown",
     "TPA WGS/TSA Protein ID"
   ],
   [
@@ -733,6 +793,7 @@
       "IAA-IZZ"
     ],
     "DDBJ",
+    "unknown",
     "TPA WGS Protein ID"
   ],
   [
@@ -740,6 +801,7 @@
       "LAA-LZZ"
     ],
     "DDBJ",
+    "unknown",
     "TSA or Targeted Gene Project Protein ID"
   ],
   [
@@ -747,6 +809,7 @@
       "JAA-JZZ"
     ],
     "GenBank",
+    "unknown",
     "TSA Protein ID"
   ],
   [
@@ -755,6 +818,127 @@
       "NAA-NZZ"
     ],
     "GenBank",
+    "unknown",
     "WGS/TSA Protein ID"
+  ],
+  [
+    [
+      "AC_"
+    ],
+    "NCBI",
+    "Genomic",
+    "Complete genomic molecule, usually alternate assembly"
+  ],
+  [
+    [
+      "NC_"
+    ],
+    "NCBI",
+    "Genomic",
+    "Complete genomic molecule, usually reference assembly"
+  ],
+  [
+    [
+      "NG_"
+    ],
+    "NCBI",
+    "Genomic",
+    "Incomplete genomic region"
+  ],
+  [
+    [
+      "NT_"
+    ],
+    "NCBI",
+    "Genomic",
+    "Contig or scaffold, clone-based or WGSa"
+  ],
+  [
+    [
+      "NW_"
+    ],
+    "NCBI",
+    "Genomic",
+    "Contig or scaffold, primarily WGSa"
+  ],
+  [
+    [
+      "NZ_b"
+    ],
+    "NCBI",
+    "Genomic",
+    "Complete genomes and unfinished WGS data"
+  ],
+  [
+    [
+      "NM_"
+    ],
+    "NCBI",
+    "mRNA",
+    "Protein-coding transcripts (usually curated)"
+  ],
+  [
+    [
+      "NR_"
+    ],
+    "NCBI",
+    "RNA",
+    "Non-protein-coding transcripts"
+  ],
+  [
+    [
+      "XM_c"
+    ],
+    "NCBI",
+    "mRNA",
+    "Predicted model protein-coding transcript"
+  ],
+  [
+    [
+      "XR_c"
+    ],
+    "NCBI",
+    "RNA",
+    "Predicted model non-protein-coding transcript"
+  ],
+  [
+    [
+      "AP_"
+    ],
+    "NCBI",
+    "Protein",
+    "Annotated on AC_ alternate assembly"
+  ],
+  [
+    [
+      "NP_"
+    ],
+    "NCBI",
+    "Protein",
+    "Associated with an NM_ or NC_ accession"
+  ],
+  [
+    [
+      "YP_c"
+    ],
+    "NCBI",
+    "Protein",
+    "Annotated on genomic molecules without an instantiatedtranscript record"
+  ],
+  [
+    [
+      "XP_c"
+    ],
+    "NCBI",
+    "Protein",
+    "Predicted model, associated with an XM_ accession"
+  ],
+  [
+    [
+      "WP_"
+    ],
+    "NCBI",
+    "Protein",
+    "Non-redundant across multiple strains and species"
   ]
 ]

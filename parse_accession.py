@@ -73,6 +73,7 @@ def make_range_matcher(spec):
     return (prefix_length + suffix_length, RangeMatcher(start[:prefix_length], suffix_length))
 
 
+REFSEQ_PREFIX_RE = re.compile('[A-Z]{2}_')
 def build_accession_parser(rules_file):
     """build_accession_parser(rules_file)
 
@@ -84,18 +85,23 @@ def build_accession_parser(rules_file):
 
     rules_data = json.load(rules_file)
     rules_by_prefix_len = {}
-    for prefix_list, database, type_description in rules_data:
+    for prefix_list, database, molecule_type, type_description in rules_data:
         for prefix in prefix_list:
             prefix_length = len(prefix)
-            if '-' in prefix or '_' in prefix:
+            if REFSEQ_PREFIX_RE.match(prefix) is not None:
+                # RefSeq whose accessions start with XX_ has its own rules
+                if 'RefSeq' not in rules_by_prefix_len:
+                    rules_by_prefix_len['RefSeq'] = []
+                rules_by_prefix_len['RefSeq'].append((prefix, database, molecule_type, type_description))
+            elif '-' in prefix or '_' in prefix:
                 (prefix_length, matcher) = make_range_matcher(prefix)
                 if prefix_length not in rules_by_prefix_len:
                     rules_by_prefix_len[prefix_length] = []
-                rules_by_prefix_len[prefix_length].append((matcher, database, type_description))
+                rules_by_prefix_len[prefix_length].append((matcher, database, molecule_type, type_description))
             else:
                 if prefix_length not in rules_by_prefix_len:
                     rules_by_prefix_len[prefix_length] = []
-                rules_by_prefix_len[prefix_length].append((prefix, database, type_description))
+                rules_by_prefix_len[prefix_length].append((prefix, database, molecule_type, type_description))
     return rules_by_prefix_len
 
 # letter_re is a greedy match so we do not need to specify that the letter prefix is followed by a number
@@ -129,11 +135,16 @@ def match_accession(accession, rules_by_prefix_len):
         raise ValueError('an accession number must start with less than 7 capital letters, this does not: ' + accession_type)
 
     if accession[2] == '_':
-        return ('NCBI', accession_type, 'RefSeq')
+        # details from https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/?report=objectonly
+        # thanks to Torsten Seemann
+        for prefix, database, molecule_type, type_description in rules_by_prefix_len['RefSeq']:
+            accession_type = molecule_type
+            if accession[:3] == prefix:
+                return (database, accession_type, 'RefSeq: ' + type_description)
 
     rules = rules_by_prefix_len[letter_match_length]
     for rule in rules:
-        (matcher, database, type_description) = rule
+        (matcher, database, _, type_description) = rule
         if (isinstance(matcher, RuleMatcher) and matcher.matches(accession)) or letter_prefix == matcher:
             return (database, accession_type, type_description)
 

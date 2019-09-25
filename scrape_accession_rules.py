@@ -35,14 +35,14 @@ scrape_accession_rules.py accession_rules.json
 
 import argparse
 import json
-from typing import List, TextIO
-
+from typing import List, Tuple, TextIO
+RulesData = List[Tuple[List[str], str, str, str]]
 from bs4 import BeautifulSoup
 import requests
 
 
-def parse_rules(text: str) -> List[List[List[str], str, str]]:
-    """parse_rules(text: str) -> List[List[List[str], str, str]]:
+def parse_rules(text: str) -> RulesData:
+    """parse_rules(text: str) -> RulesData:
        
        parse the rules from the NCBI webpage, returns a list of lists, which each inner list having the
        elements:
@@ -62,7 +62,23 @@ def parse_rules(text: str) -> List[List[List[str], str, str]]:
                 prefix = [p.strip() for p in prefix.split(',')]
             else:
                 prefix = [prefix]
-            data.append([prefix, database, type_description])
+            data.append((prefix, database, 'unknown', type_description))
+    return data
+
+
+def parse_refseq_rules(text: str) -> RulesData:
+    """parse_refseq_rules(text: str) -> RulesData
+    
+    Parse the rules for NCBI RefSeq (thanks to Torsten Seemann for pointing them out)"""
+    database = 'NCBI'
+    soup = BeautifulSoup(text, 'html.parser')
+    table = soup.find('div', id='ch18.T.refseq_accession_numbers_and_mole').table
+    data = []
+    for row in table.tbody.find_all('tr'):
+        prefix = row.td.text
+        molecule_type = row.td.next_sibling.text
+        type_description = row.td.next_sibling.next_sibling.text
+        data.append(([prefix], database, molecule_type, type_description))
     return data
 
 
@@ -76,8 +92,8 @@ def fetch(url: str = 'https://www.ncbi.nlm.nih.gov/Sequin/acc.html') -> str:
     return response.text
 
 
-def save_data(data: List[List[List[str], str, str]], output: TextIO) -> None:
-    """save_data(data: List[List[List[str], str, str]], output: TextIO)
+def save_data(data: RulesData, output: TextIO) -> None:
+    """save_data(data: RulesData, str, str], output: TextIO)
 
     Saves the data from parsing the accession description page to a JSON format file. output must be a
     file open for writing."""
@@ -88,4 +104,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Save rules from NCBI website')
     parser.add_argument('output_file', type=argparse.FileType('w'))
     args = parser.parse_args()
-    save_data(parse_rules(fetch()), args.output_file)
+    data = parse_rules(fetch())
+    refseq_data = parse_refseq_rules(fetch(url='https://www.ncbi.nlm.nih.gov/books/NBK21091/table/ch18.T.refseq_accession_numbers_and_mole/?report=objectonly'))
+    data.extend(refseq_data)
+    save_data(data, args.output_file)
