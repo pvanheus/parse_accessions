@@ -19,3 +19,5 @@ script requires at least Python 3.6 and the modules specified in `conda_requirem
 
 This code is licensed under the BSD 3 clause license. Please feel free to use and modify the code, but
 it is released without warranty. See the `.py` files for details.
+
+[![CircleCI](https://circleci.com/gh/pvanheus/parse_accessions.svg?style=svg)](https://circleci.com/gh/pvanheus/parse_accessions)
